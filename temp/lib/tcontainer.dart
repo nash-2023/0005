@@ -7,26 +7,37 @@ class Tcontainer extends StatelessWidget {
   Widget build(BuildContext context) {
     final pics = [
       _rendImage("02.jpg"),
+      Divider(),
       _rendImage("04.jpg"),
+      Divider(),
       _rendImage("05.jpg"),
-      // _rendImage("06.jpg"),
-      // _rendImage("07.jpg"),
-      // _rendImage("08.jpg"),
-      // _rendImage("09.jpg"),
-      // _rendImage("010.jpg"),
+      Divider(),
+      _rendImage("06.jpg"),
+      Divider(),
+      _rendImage("07.jpg"),
+      Divider(),
+      _rendImage("08.jpg"),
+      Divider(),
+      _rendImage("09.jpg"),
+      Divider(),
+      _rendImage("10.jpg"),
     ];
     // pics.add()
 
     return Container(
       margin: EdgeInsets.all(5.0),
       padding: EdgeInsets.all(5.0),
+      height: 650,
+      width: 350,
       decoration: BoxDecoration(
         color: Colors.black12,
         border: Border.all(width: 1.0, color: Colors.black87),
         borderRadius: BorderRadius.circular(10.0),
       ),
-      child: Wrap(
-        direction: Axis.horizontal,
+      child: ListView(
+        // direction: Axis.horizontal,
+        // alignment: WrapAlignment.end,
+        scrollDirection: Axis.vertical,
         children: pics,
       ),
     );
